@@ -34,7 +34,6 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-         
       }
     },
       methods: {
@@ -43,3 +42,7 @@ const vue_app = Vue.createApp({
 })
 
 vue_app.mount("#vue_app")
+
+var title = 'IMDB + YourName’s Top 8 Movies'
+var owner = 'name'
+var github = 'https://github.com/223cvalente/Valente-NJIT-3'
