@@ -34,17 +34,20 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-           
+            movies("")
+            title: 'IMDB + Chris Top 8 Movies',
+            owner: 'Chris',
+            github: 'https://github.com/223cvalente/Valente-NJIT-3'
+
       }
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+          
       }
 })
 
 vue_app.mount("#vue_app")
 
-let title = 'IMDB + YourName’s Top 8 Movies'
-let owner = 'name'
-let github = 'https://github.com/223cvalente/Valente-NJIT-3'
+
 
