@@ -98,14 +98,14 @@ const vue_app = Vue.createApp({
                   +dateArra[0];
             },
             like: function(index){
-                  
-            }
+                  this.movies(Insex).likes += 1;
+            },
             dislike: function(index){
-                  
-            }
+                  this.movies(Insex).dislikes += 1;
+            },
             posterclick: function(index){
-                  
-            }
+                  letind
+            
       }
 })
 
