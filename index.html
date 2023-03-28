@@ -26,7 +26,7 @@
 	    <div class="header">
 
 	      <div class="container">
-	        <h1 id="item-{{#app_title}}">{{app.title}}</h1>
+	        <h1 id="">{{app.title}}</h1>
 	      </div>
 
 	    </div>
@@ -45,7 +45,7 @@
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movie.Iscore}} </p>
 						<p class="runtime">Runtime: {{timeText(movie.runtime)}}</p>
 						<p class="released">Released: {{getMonthText(movie.released) }} | Rated: {{movie.rating}}</p>
-						<p class="websites">Websites: <a :href ="movie.imdb" > imdb </a> | <a :href="movie.website">website</a></p>
+				     		<p class="websites">Websites: <a :href ="movie.imdb" > imdb </a> | <a :href="movie.website">website</a></p>
 
 			            <div class="social">
 			              <p @click = "Like(index) " class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i>{{movie.likes}}</p>
