@@ -5,7 +5,7 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background-image: url(img/background2.jpg);
 }
 
 /* This stylizes the header area */
@@ -14,7 +14,9 @@ body {
 }
 .header h1 {
     display: inline-block;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
 }
 
 /* This stylizes the main page area */
