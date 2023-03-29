@@ -21,6 +21,7 @@
 */
 
 
+
 const vue_app = Vue.createApp({
       // This automatically imports your movies.json file and puts it into
       //   the variable: movies
@@ -34,82 +35,50 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-            title: "IMDB + Chris Top 8 Movies",
-            owner: "Chris",
-            github: "https://github.com/223cvalente/Valente-NJIT-3"
-
+            months: ['Janurary', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',],
+            title:"IMDB + Chris Top 8 Movies",
+            owner:"chris",
+            github:"https://github.com/223cvalente/Valente-NJIT-3"
       }
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-            getMonthText: function(dateArray){
-                  switch(dateArray[1]) {
-                        case 1: 
-                        month = "January";
-                        break;
+            getMonthText(dataArray) {
+                  var year = dataArray[0];
+                  var month = this.months[dataArray[1] - 1]
+                  var day = dataArray[2];
 
-                        case 2: 
-                        month = "Febuary";
-                        break;
-                        
-                        case 3: 
-                        month = "March>";
-                        break;
-                      
-                        case 4: 
-                        month = "April";
-                        break;
-                      
-                        case 5: 
-                        month = "May";
-                        break;
-                  
-                        case 6: 
-                        month = "June";
-                        break;
+                  return month +' ' + day + ', ' + year;
+            },
 
-                        case 7: 
-                        month = "July";
-                        break;
-                        
-                        case 8: 
-                        month = "August";
-                        break;
-                      
-                        case 9: 
-                        month = "September";
-                        break;
-                      
-                        case 10: 
-                        month = "October";
-                        break;
+            like(index) {
+                  this.movies[index].likes++;
+            },
+    dislike(index) {
+                  this.movies[index].dislike++;
+            },
 
-                        case 11: 
-                        month = "November";
-                        break;
-
-                        case 12: 
-                        month = "December";
-                        break;
-
-
+            posterClick(index) {
+                  this.movies[index].posterindex++;
+                
+                  if(this.movies[index].posterindex >= this.movies[index].posters) {
+                        this.movies[index].posterindex = 0;
                   }
-                  return month + "" + dateArray[2] + ", " 
-                  +dateArra[0];
             },
-            like: function(index){
-                  this.movies(Insex).likes += 1;
-            },
-            dislike: function(index){
-                  this.movies(Insex).dislikes += 1;
-            },
-            posterclick: function(index){
-                  letind
-            
+
+            timeText(minutes) {
+                  var hours = Math.floor(minutes/60);
+                
+                
+                  var minutes = minutes%60;
+
+
+
+
+
+                  return hours + ' hours ' + minutes + ' minutes ';
+            }
       }
 })
 
 vue_app.mount("#vue_app")
-
-
-
